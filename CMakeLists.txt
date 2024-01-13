@@ -4,4 +4,7 @@ project(Data_Structures)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Data_Structures
-        First_Lecture/main.cpp)
+#        First_Lecture/main.cpp
+#        Homeworks/Week1/HW1.cpp
+        Homeworks/Week1/main.cpp
+)
