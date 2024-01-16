@@ -1,6 +1,4 @@
-//
-// Created by 37129 on 1/16/2024.
-//
+// Saulitis_Leo_221RDB477
 
 #include <iostream>
 #include <map>

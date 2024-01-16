@@ -1,11 +1,5 @@
 // Saulitis_Leo_221RDB477
 
-/*
-Write a program that prompts the user to input three numbers.
-The program should then output the numbers in ascending order.
-PS Those with experience can use alternative methods to simple if else chains.
- */
-
 #include <iostream>
 using namespace std;
 
@@ -16,6 +10,8 @@ int main() {
     cout << "Please enter three numbers: " << endl;
     cin >> num1 >> num2 >> num3;
 
+
+    // Created with the help of Co-pilot auto complete
     if (num1 < num2 && num1 < num3) {
         cout << num1 << " ";
         if (num2 < num3) {
