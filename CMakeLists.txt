@@ -7,5 +7,6 @@ add_executable(Data_Structures
 #        First_Lecture/main.cpp
 #        Homeworks/Week1/HW1.cpp
 #        Homeworks/Week1/HW2.cpp
-        Homeworks/Week2/main.cpp
+#        Homeworks/Week2/main.cpp
+        Homeworks/Week2/HW4.cpp
 )
