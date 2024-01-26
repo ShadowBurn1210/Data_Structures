@@ -9,5 +9,6 @@ add_executable(Data_Structures
 #        Homeworks/Week1/HW2.cpp
 #        Homeworks/Week2/HW3.cpp
 #        Homeworks/Week2/HW4.cpp
-        Homeworks/Week3/HW6.cpp
+#        Homeworks/Week3/HW6.cpp
+        Homeworks/Week3/HW5.cpp
 )

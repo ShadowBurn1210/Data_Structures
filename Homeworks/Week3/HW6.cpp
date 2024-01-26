@@ -1,21 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int getCityYear(double starting_population, double increse_precentage, int delta, double end_population) {
-//    double population = starting_population;
-    double percantage = increse_precentage * 0.01;
+int getCityYear(int p0, double perc, int delta, double p) {
+//    double population = p0;
+    double percantage = perc * 0.01;
     int year=0;
     double difference;
 
 
-
-    while(starting_population < end_population){
-        difference = (starting_population * percantage) + delta;
+    while(p0 < p){
+        difference = (p0 * percantage) + delta;
         if (difference < 0){
             year = -1;
             return year;
         }
-        starting_population += starting_population * percantage + delta;
+        p0 += p0 * percantage + delta;
         year++;
     }
 
