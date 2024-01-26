@@ -26,10 +26,10 @@ int isPrime(int number){
 int main(){
 
 
-    int first_try = isPrime(1'000'001);
+    int first_try = isPrime(17);
     cout << first_try << endl;
 
-    int second_try = isPrime(1'000'021);
+    int second_try = isPrime(42);
     cout << second_try << endl;
 
     int third_try = isPrime(1'000'037);
