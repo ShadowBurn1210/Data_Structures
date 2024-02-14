@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 
     ifstream myfile;
-    myfile.open("C:\\Users\\37129\\Programming\\Programming Languages\\Data_Structures\\Homeworks\\Week4\\numbers.txt");
+    myfile.open("\numbers.txt");
     vector<int> arr;
 
     if (myfile.is_open()) {
