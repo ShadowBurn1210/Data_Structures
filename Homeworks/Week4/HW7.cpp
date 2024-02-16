@@ -1,21 +1,29 @@
-//Write a program that finds TWO missing numbers out of 50 numbers.
-//
-//Numbers are unique, not in any order, and their values are from 1 to 50.
-//
-//You have 48 numbers you do not know which 2 numbers are missing.
-
 // reference for task https://www.geeksforgeeks.org/insert-elements-c-stl-list/
-#include <iostream>
-#include <list>
+// Saulitis_Leo_221RDB477
 
+
+#include <iostream>
+#include <vector>
+#include<algorithm>
+#include <fstream>
 using namespace std;
 
 int main(){
     int index =1;
     int number_value = 1;
-    int arr[10] = {1,2,3,4,5,7,8,9,10, 11};
+    ifstream myfile;
+    myfile.open("C:\\Users\\37129\\Programming\\Programming Languages\\Data_Structures\\Homeworks\\Week4\\missing_numbers.txt");
+    vector<int> arr;
 
-    while(index<=11){
+    if (myfile.is_open()) {
+        int number;
+        while (myfile >> number) {
+            arr.push_back(number);
+        }
+    }
+    sort(arr.begin(), arr.end());
+
+    while(index<=arr.size()){
 
         if(arr[index-1] != number_value){
             cout << "Missing number: " << number_value << endl;

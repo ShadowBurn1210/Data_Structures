@@ -1,3 +1,5 @@
+// Saulitis_Leo_221RDB477
+
 #include <iostream>
 #include <vector>
 #include<algorithm>
@@ -7,7 +9,7 @@ using namespace std;
 int main(){
 
     ifstream myfile;
-    myfile.open("\numbers.txt");
+    myfile.open("C:\\Users\\37129\\Programming\\Programming Languages\\Data_Structures\\Homeworks\\Week4\\numbers.txt");
     vector<int> arr;
 
     if (myfile.is_open()) {
