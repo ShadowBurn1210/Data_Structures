@@ -8,7 +8,7 @@ using namespace std;
 
 class Song {
 
-private:
+protected:
     string title;
     string author;
     string lyrics;
@@ -27,6 +27,8 @@ public:
 // https://chat.openai.com/share/5763403c-d865-4c81-8696-93bb0f0c9a42 my chat with openAI to make member functions chainable
     Song& sing(int max_lines = -1) {
         int lines_printed = 0;
+
+        transform(lyrics.begin(), lyrics.end(), lyrics.begin(), ::tolower);
 
         cout << author << " -- " << title << " -- " << year << endl;
         if (max_lines == -1) {
@@ -71,32 +73,59 @@ public:
 
 
 ////https://www.w3schools.com/cpp/cpp_inheritance.asp
-//class Rap: public Song {
-//public:
-//    Rap& break_it(int max_lines = -1, string drop = "yeah") {
-//        string modified_lyrics = lyrics;
-//
-//        // Applying the drop modification
-//        if (max_lines == -1)
-//            max_lines = modified_lyrics.size();
-//        for (int i = 0; i < max_lines; ++i) {
-//            if (modified_lyrics[i] == ' ')
-//                modified_lyrics.insert(i + 1, drop);
-//        }
-//
-//        cout << modified_lyrics << endl;
-//        return *this;
-//    }
-//};
+class Rap: public Song {
 
+public:
+    Rap(string title = "", string author = "", string lyrics = "", int year = 0) :  Song(title, author, lyrics, year) {}
+
+    Rap& break_it(int max_lines = -1, string drop = "yeah") {
+        string modified_lyrics = lyrics;
+        transform(drop.begin(), drop.end(), drop.begin(), ::toupper);
+        int lines_printed = 0;
+
+
+        if (max_lines == -1) {
+            cout << lyrics << endl;
+
+            // Got the help from co-pilot to split on \n
+        } else {
+            for (char c : lyrics) {
+
+                cout << c;
+                if (c == '\n') {
+                    lines_printed++;
+                    if (lines_printed == max_lines)
+                        break;
+                }else if (c == ' ') {
+                    cout << drop << " ";
+                }
+            }
+    };
+
+        return *this;
+    }
+};
 
 int main() {
 
-    auto prayers = Song("Livin On A Prayer",
-                        "Bon Jovi",
-                        "Tommy used to work on the docks\nUnion's been on strike, he's down on his luck\n", 1988);
+//    auto prayers = Song("Livin On A Prayer",
+//                        "Bon Jovi",
+//                        "Tommy used to work on the docks\nUnion's been on strike, he's down on his luck\n", 1988);
+//    auto always = Song("Always",
+//                       "Bon Jovi",
+//                       "This Romeo is bleeding, but you can't see his blood\nIt's nothing but some feelings\n"
+//                       "This old dog kicked up", 1994);
+//    prayers.sing(1).yell();
+//    always.sing(1).yell(2).sing(3);
 
-    prayers.sing(1).yell();
+
+
+    auto zrap = Rap("Always",
+                       "Bon Jovi",
+                       "This Romeo is bleeding, but you can't see his blood\nIt's nothing but some feelings\n"
+                       "This old dog kicked up", 1994);
+    zrap.break_it(2, "yeah");
+
 
     return 0;
 }
