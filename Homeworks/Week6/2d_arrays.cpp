@@ -8,7 +8,7 @@ using namespace std;
 
 
 int smallest_value(vector<int> &vec);
-int average_value(vector<int> &vec);
+double average_value(vector<int> &vec);
 double standard_deviation(vector<int> &vec);
 
 int main() {
@@ -85,9 +85,9 @@ int smallest_value(vector<int> &vec) {
 
 
 // Used this for understanding the math behind it https://chat.openai.com/share/63846eec-5549-4f7c-b17d-a4d0b71c3c91
-int average_value(vector<int> &vec) {
-    int sum = 0;
-    int count = 0;
+double average_value(vector<int> &vec) {
+    double sum = 0;
+    double count = 0;
     for (int i = 0; i < vec.size(); i++) {
         sum += vec[i];
         count++;
