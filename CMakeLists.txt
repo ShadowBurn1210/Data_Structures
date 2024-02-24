@@ -13,5 +13,6 @@ add_executable(Data_Structures
 #        Homeworks/Week3/HW5.cpp
 #        Homeworks/Week4/HW7.cpp
         Homeworks/Week5/Song.cpp
-#        Homeworks/Week4/HW8.cpp
+        First_Lecture/classes_inheritence.cpp
+        #        Homeworks/Week4/HW8.cpp
 )
