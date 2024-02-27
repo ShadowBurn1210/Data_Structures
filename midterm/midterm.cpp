@@ -9,6 +9,11 @@
 
 using namespace std;
 
+
+// used multiple chats like https://chat.openai.com/share/3d5fe90a-9d78-44cd-8266-61a10525d5cc
+// https://chat.openai.com/share/dc6c1734-379f-48d2-9227-d2b1c2dfa92c
+// along with huge help from co-pilot that wrote a lot of boilerplate code
+
 double read_file_poins();
 double read_file_lines();
 
@@ -159,6 +164,7 @@ double read_file_lines() {
     while (getline(lines_csv, line)) {
         vector<double> input_line;
 
+        // check for 4 elements
         stringstream ss(line);
         vector<double> elements;
         double num1;
@@ -168,8 +174,8 @@ double read_file_lines() {
                 ss.ignore();
         }
         if (elements.size() != 4) {
-            cerr << "Invalid number of elements in the row" << endl;
             cout << "Row: " << line << endl;
+
             continue;
         }
 
