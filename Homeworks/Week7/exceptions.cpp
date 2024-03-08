@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// These function were written with help from co-pilot, as it severly reduced boiler plate code
 void parseDate(string date, int &day, int &month, int &year);
 string determen_mounth(int month);
 bool isLeapYear(int year);
@@ -73,6 +74,7 @@ class InvalidMonthException_custom : public invalid_argument {
 public:
     InvalidMonthException_custom() : invalid_argument("You should enter a day that exists!!! I am very smart programme that knows the truht") {}
 };
+
 // determen which month the birthday is in, and if not valid throw exception
 string determen_mounth(int month) {
     switch (month) {
