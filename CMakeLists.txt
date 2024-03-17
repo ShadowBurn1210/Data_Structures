@@ -7,7 +7,8 @@ add_executable(Data_Structures
 #        First_Lecture/midterm_prep.cpp
 #        midterm/midterm.cpp
 #        Homeworks/Week7/exceptions.cpp
-        Homeworks/Week8/collest_math_algorithm.cpp
+#        Homeworks/Week8/collest_math_algorithm.cpp
+        Homeworks/Week9/arithmetic_parser.cpp
 #        Homeworks/Week6/2d_arrays.cpp
 #        First_Lecture/main.cpp
 #        Homeworks/Week1/HW1.cpp
