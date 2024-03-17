@@ -9,7 +9,9 @@ add_executable(Data_Structures
 #        Homeworks/Week7/exceptions.cpp
 #        Homeworks/Week8/collest_math_algorithm.cpp
         Homeworks/Week9/arithmetic_parser.cpp
-#        Homeworks/Week6/2d_arrays.cpp
+        Homeworks/Week9/shunting_yard.cpp
+        Homeworks/Week9/shunting_yard.hpp
+        #        Homeworks/Week6/2d_arrays.cpp
 #        First_Lecture/main.cpp
 #        Homeworks/Week1/HW1.cpp
 #        Homeworks/Week1/HW2.cpp
