@@ -6,7 +6,7 @@
 using namespace std;
 
 bool isOperator(char);
-int calculate_resutl(queue<char>&);
+double calculate_resutl(queue<char>&);
 int priotity(char);
 bool is_bracket(char);
 bool is_letter(char);
