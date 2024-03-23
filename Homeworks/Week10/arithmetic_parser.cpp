@@ -20,7 +20,7 @@ int main(){
     int error_num;
     string line;
 
-    ifstream file("C:\\Users\\Admin\\CLionProjects\\Data_Structures\\Homeworks\\Week10\\test_data.txt");
+    ifstream file("file");
 
     if (!file.is_open()) {
         cerr << "Error opening file!" << endl;
