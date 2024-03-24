@@ -40,7 +40,9 @@ int main(){
             // However, when I added numbers with more than one digit, I had to change it to for (int index = 0; index < input.size(); ++index)
             char i = input[index];
             count++;
-            if (i == ' ' || i == '\t' || i == '\n'){
+
+            //https://en.cppreference.com/w/cpp/string/byte/isspace
+            if (isspace(i)){
                 continue;
             }
 
