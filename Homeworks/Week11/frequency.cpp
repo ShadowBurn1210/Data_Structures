@@ -9,10 +9,10 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-    map<char, int> frequency;
+    map<wchar_t, int> frequency;
     string input_file;
     string output_file;
-    string line;
+    wstring line;
 
     for (int i = 0; i < argc; i++) {
         if (strcmp(argv[i], "-i") == 0) {
@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
             output_file = argv[i + 1];
         }
     }
-    ifstream file(input_file);
+    wifstream file(input_file);
 
     if (!file.is_open()) {
         // cerr is used to print errors to the standard error stream
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 
     while (getline(file, line)) {
         cout << "Input file: " << endl;
-        for (char i : line) {
+        for (wchar_t i : line) {
             if (isspace(i)) {
                 continue;
             }
@@ -44,13 +44,15 @@ int main(int argc, char* argv[]) {
                 frequency[i]++;
             }
         }
-
-        cout << "Frequency of characters in the string: " << endl;
-        for (auto i: frequency) {
-            cout << i.first << " : " << i.second << endl;
-        }
     }
-    cout << "Output file: " << endl;
+    // add to frequency map test element
+    frequency[L'Ģ'] = 1;
+    // write to output file with extension tsv
+    wofstream output(output_file);
+    for (auto const& [key, val] : frequency) {
+        output << key << "\t" << val << endl;
+    }
+    cout << "Output file: " << output_file<< endl;
     return 0;
 }
 
