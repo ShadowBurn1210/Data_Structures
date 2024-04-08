@@ -6,7 +6,8 @@ set(Foo "")      # 1 quoted arg -> value is ""
 
 # Add the executable target
 add_executable(Data_Structures
-        Homeworks/Week11/frequency.cpp
+#        Homeworks/Week11/frequency.cpp
+        Homeworks/Week12/find_target.cpp
 )
 
 # Pass arguments to the executable target
