@@ -27,7 +27,7 @@ pair<int, int> find_target(int target, vector<int> nums) {
 int main(){
     int target = 0;
     vector<int> nums;
-    string filename = "C:\\Users\\37129\\Programming\\Programming Languages\\Data_Structures\\Homeworks\\Week12\\two_sum_target_n_data.txt";
+    string filename = "input.txt";
     ifstream file(filename);
     if (file.is_open()) {
         string line;
