@@ -44,7 +44,6 @@ pair<int, int> find_target(int target, vector<int> nums) {
     for (int i = 0; i < nums.size(); i++) {
         int complement = target - nums[i];
         if (m.find(complement) != m.end()) {
-            // Access value using -> operator on the iterator (corrected)
             return {m.find(complement)->second, i};
         }
         m[nums[i]] = i;
@@ -64,7 +63,13 @@ int main(){
 
     int target3 = 10;
     vector<int> nums3 = {1, 2, 3, 4};
-    std::pair<int, int> result3 = find_target(target3, nums3);
+    pair<int, int> result3 = find_target(target3, nums3);
     cout << result3.first << "," << result3.second << endl;
+
+    int target2 = 6;
+    // create a vector with 20 integers
+    vector<int> nums2 = {9, 7, 18, 53, 14, 3, 3};
+    pair<int, int> result2 = find_target(target2, nums2);
+    cout << result2.first << "," << result2.second << endl;
     return 0;
 }
