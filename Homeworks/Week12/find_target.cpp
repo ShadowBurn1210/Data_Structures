@@ -11,6 +11,7 @@ using namespace std;
 pair<int, int> find_target(int target, vector<int> nums) {
     unordered_map<int, int> m;
 
+    // this was written with help of co-pilot
     for (int i = 0; i < nums.size(); i++) {
         int complement = target - nums[i];
         if (m.find(complement) != m.end()) {
